@@ -1,0 +1,22 @@
+development: &dev
+  adapter: postgresql
+  encoding: unicode
+  database: s3_relay_demo_development
+  pool: 5
+  username: <%= ENV["USER"] %>
+  password:
+  allow_concurrency: true
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: s3_relay_demo_test
+  pool: 5
+  username: <%= ENV["USER"] %>
+  password:
+  allow_concurrency: true
+  min_messages: error
+
+production:
+  <<: *dev
