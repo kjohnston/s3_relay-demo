@@ -1,7 +1,7 @@
 <h1>OMG <%= @thing.name %>!</h1>
 
 <form class="s3_relay">
-  <%= file_field_tag :file %>
+  <%= file_field_tag :file, multiple: true %>
 </form>
 
 <p><%= link_to "All teh Things", things_path %></p>
