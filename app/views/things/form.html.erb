@@ -1,0 +1,17 @@
+<h1>New Thing</h1>
+
+<%= form_for @thing do |f| %>
+
+  <div class="row">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="row">
+    <%= label_tag "photos" %>
+    <%= s3_relay_field :thing, :photo_uploads, multiple: true %>
+  </div>
+
+  <%= f.submit "Submit" %>
+
+<% end %>
