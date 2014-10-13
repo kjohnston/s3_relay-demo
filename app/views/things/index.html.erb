@@ -3,10 +3,12 @@
 <table>
   <tr>
     <th>Name</th>
+    <th></th>
   </tr>
   <% @things.each do |t| %>
     <tr>
-      <td><%= link_to t.name, t %></td>
+      <td><%= link_to t.name, thing_path(t) %></td>
+      <td><%= link_to "Edit", edit_thing_path(t) %></td>
     </tr>
   <% end %>
 </table>

@@ -1,4 +1,4 @@
-<h1>New Thing</h1>
+<h1><%= @thing.new_record? ? "New" : "Edit" %> Thing</h1>
 
 <%= form_for @thing do |f| %>
 
@@ -7,11 +7,15 @@
     <%= f.text_field :name %>
   </div>
 
+  <%= render "uploads", pending_uploads: @pending_uploads %>
+
   <div class="row">
-    <%= label_tag "photos" %>
+    <%= label_tag "Add Attachments" %>
     <%= s3_relay_field :thing, :photo_uploads, multiple: true %>
   </div>
 
   <%= f.submit "Submit" %>
 
 <% end %>
+
+<%= link_to "Cancel", things_path %>

@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>File</th>
+    <th></th>
+  </tr>
+  <% pending_uploads.each do |u| %>
+    <tr>
+      <td><%= link_to u.filename, u.private_url %></td>
+      <td><%= u.state.titlecase %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,5 +1,7 @@
 <h1>OMG <%= @thing.name %>!</h1>
 
-<%= s3_relay_field :thing, :photo_uploads, multiple: true %>
+<p><%= link_to "Edit", edit_thing_path(@thing) %></p>
+
+<%= render "uploads", pending_uploads: @pending_uploads %>
 
 <p><%= link_to "All teh Things", things_path %></p>
