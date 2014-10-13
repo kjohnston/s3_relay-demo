@@ -7,7 +7,7 @@
     <%= f.text_field :name %>
   </div>
 
-  <%= render "uploads", pending_uploads: @pending_uploads %>
+  <%= render "uploads", pending_uploads: @pending_uploads || [] %>
 
   <div class="row">
     <%= label_tag "Add Attachments" %>
