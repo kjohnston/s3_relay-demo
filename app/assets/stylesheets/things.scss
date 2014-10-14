@@ -1,0 +1,11 @@
+table {
+  &.things-list {
+    margin-top: 20px;
+
+    td {
+      &:first-child {
+        min-width: 30em;
+      }
+    }
+  }
+}

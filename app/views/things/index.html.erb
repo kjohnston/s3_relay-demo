@@ -1,16 +1,19 @@
 <h1>All teh Things!</h1>
 
-<table>
+<p><%= link_to "New Thing", new_thing_path, class: "button" %></p>
+
+<table class="things-list">
   <tr>
-    <th>Name</th>
+    <th>Thing</th>
     <th></th>
   </tr>
   <% @things.each do |t| %>
     <tr>
-      <td><%= link_to t.name, thing_path(t) %></td>
-      <td><%= link_to "Edit", edit_thing_path(t) %></td>
+      <td><%= t.name %></td>
+      <td>
+        <%= link_to "Show", thing_path(t) %>
+        <%= link_to "Edit", edit_thing_path(t) %>
+      </td>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Thing", new_thing_path %></p>
