@@ -1,6 +1,8 @@
 <h1>All teh Things!</h1>
 
-<p><%= link_to "New Thing", new_thing_path, class: "button" %></p>
+<div class="button-bar">
+  <%= link_to "New Thing", new_thing_path, class: "button" %>
+</div>
 
 <table class="things-list">
   <tr>
@@ -10,7 +12,7 @@
   <% @things.each do |t| %>
     <tr>
       <td><%= t.name %></td>
-      <td>
+      <td class="controls">
         <%= link_to "Show", thing_path(t) %>
         <%= link_to "Edit", edit_thing_path(t) %>
       </td>

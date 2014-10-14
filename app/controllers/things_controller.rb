@@ -1,6 +1,7 @@
 class ThingsController < ApplicationController
 
   before_action :find_thing, only: [:show, :edit, :update]
+  before_action :find_files, only: [:new, :create, :show, :edit, :update]
 
   def index
     @things = Thing.all.order("created_at DESC")
@@ -40,7 +41,16 @@ class ThingsController < ApplicationController
 
   def find_thing
     @thing = Thing.find(params[:id])
-    @pending_uploads = @thing.photo_uploads.pending
+  end
+
+  def find_files
+    if @thing.try(:persisted?)
+      @imported_files  = []  # TODO: Use something like @thing.photos
+      @pending_uploads = @thing.photo_uploads.pending
+    else
+      @imported_files  = []
+      @pending_uploads = []
+    end
   end
 
   def thing_params

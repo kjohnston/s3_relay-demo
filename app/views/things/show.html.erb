@@ -1,7 +1,18 @@
 <h1>OMG <%= @thing.name %>!</h1>
 
-<p><%= link_to "Edit", edit_thing_path(@thing) %></p>
+<div class="button-bar">
+  <%= link_to "Edit", edit_thing_path(@thing), class: "button" %>
+  <%= link_to "All teh Things", things_path, class: "button" %>
+</div>
 
-<%= render "uploads", pending_uploads: @pending_uploads %>
+<div id="thing-file-lists">
+  <%#= Listing of previously imported files %>
+  <% if @imported_files.any? %>
+    <%= render "imported", files: @imported_files %>
+  <% end %>
 
-<p><%= link_to "All teh Things", things_path %></p>
+  <%#= Listing of uploads awaiting import %>
+  <% if @pending_uploads.any? %>
+    <%= render "pending", uploads: @pending_uploads %>
+  <% end %>
+</div>

@@ -5,6 +5,7 @@ body {
 
 h1, h2, h3 {
   font-family: sans-serif;
+  margin: 0 0 1em;
 }
 
 a {
@@ -19,19 +20,31 @@ a {
     color: #007095;
     text-decoration: underline;
   }
+}
 
-  &.button {
-    background-color: #008cba;
-    border: 1px solid #007095;
+.button-bar {
+  margin: 0 0 2em;
+}
+
+.button {
+  background-color: #008cba;
+  border: 1px solid #007095;
+  color: #fff;
+  cursor: pointer;
+  display: block-inline;
+  font-family: sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: .5em;
+  margin: 0 .5em 0 0;
+
+  &:active, &:visited {
     color: #fff;
-    display: block-inline;
-    letter-spacing: 1px;
-    padding: .5em;
+  }
 
-    &:hover {
-      background-color: #007095;
-      text-decoration: none;
-    }
+  &:hover {
+    background-color: #007095;
+    text-decoration: none;
   }
 }
 
@@ -58,9 +71,45 @@ table {
     td {
       padding: .5em;
 
-      a {
-       margin-left: 1em;
+      &.controls {
+        a {
+         margin-left: 1em;
+        }
       }
     }
+  }
+}
+
+form {
+  .row {
+    overflow: auto;
+    width: 30em;
+
+    label {
+      display: block;
+      float: left;
+      font-weight: bold;
+      margin: .2em 5% 0 0;
+      width: 10%;
+    }
+
+    input {
+      outline: none;
+    }
+
+    input[type="text"] {
+      display: block;
+      float: left;
+      padding: .2em;
+      width: 80%;
+    }
+  }
+}
+
+.file-list {
+  margin: 1em 0 1em;
+
+  table {
+    width: 100%;
   }
 }

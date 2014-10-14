@@ -1,0 +1,11 @@
+<div class="row file-list">
+  <h3>Pending Files</h3>
+  <table>
+    <% uploads.each do |u| %>
+      <tr>
+        <!-- <td>TODO: Icon based on content type</td> -->
+        <td><%= link_to u.filename, u.private_url %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
