@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/kjohnston/s3_relay.git
-  revision: 5f81dfe016dc77cf49679744e6d6bff88ec444d3
+PATH
+  remote: /Users/kjohnston/code/kjohnston/s3_relay
   specs:
     s3_relay (0.0.1)
       coffee-rails
