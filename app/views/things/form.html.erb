@@ -20,7 +20,7 @@
   <%#= Area for user to upload new files %>
   <div class="row file-list">
     <h3>Upload New Files</h3>
-    <%= s3_relay_field :thing, :photo_uploads, multiple: true %>
+    <%= s3_relay_field @thing, :photo_uploads, multiple: true %>
   </div>
 
   <%= f.submit "Submit", class: "button" %>
