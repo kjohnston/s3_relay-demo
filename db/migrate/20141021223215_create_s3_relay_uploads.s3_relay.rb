@@ -3,6 +3,7 @@ class CreateS3RelayUploads < ActiveRecord::Migration
   def change
     create_table :s3_relay_uploads do |t|
       t.binary :uuid, length: 16
+      t.integer :user_id
       t.string :parent_type
       t.integer :parent_id
       t.string :upload_type
