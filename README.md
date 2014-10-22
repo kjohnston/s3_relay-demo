@@ -2,7 +2,9 @@
 
 ## Overview
 
-This Rails app serves as the test harness / demo application for the [s3_relay](https://github.com/kjohnston/s3_relay) gem.
+This is a demo Rails application for the [s3_relay](https://github.com/kjohnston/s3_relay) gem.
+
+![s3_relay Demo](https://dl.dropboxusercontent.com/u/19346714/Github/s3_relay-demo/s3_relay-demo-edit.png)
 
 ## Contributing
 
