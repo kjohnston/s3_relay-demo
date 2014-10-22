@@ -16,4 +16,4 @@ group :development do
 end
 
 # Functionality
-gem "s3_relay", github: "kjohnston/s3_relay"
+gem "s3_relay", "~> 0.0.2"
